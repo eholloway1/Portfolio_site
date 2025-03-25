@@ -25,14 +25,17 @@ export function NavBar() {
             path: "/"
         },
         {
-            pageName: "test",
-            path: "noPat"
+            pageName: "About Me",
+            path: "/about"
         }
     ];
 
     function MakePageTitle(path: string) {
         if(path == "/"){
             return <h2>Evan Holloway's Portfolio</h2>
+        }
+        if(path == "/about"){
+          return <h2>About Evan Holloway</h2>
         }
     }
 
