@@ -4,7 +4,7 @@ import { Divider, Card, CardActions, CardContent, CardMedia, Button, Typography 
 
 interface Project {
   name: string,
-  url: string,
+  url: string | null,
   img: string | null,
   descr: string
 }
@@ -50,6 +50,20 @@ export function Portfolio() {
       descr: "A frontend application that allows each user to create a deck of cards. " +
         "Each deck may contain many cards, but a card may only belong to one deck. " +
         "Each card has an attack, and attacks can belong to many cards."
+    },
+    {
+      name: "Inventory App",
+      url: "https://github.com/MV-Open-SWE-9/group-full-stack-inventory-application-project-team-2",
+      img: null,
+      descr: "This is a Full-Sack RESTful CRUD application that can be used to track Sequelized items. Users can view their items, including the name, description, price, category, inluded image. " +
+        "Users can also view their items individually. Items can be added, deleted, and updated."
+    },
+    {
+      name: "Wikiverse",
+      url: "https://github.com/MV-Open-SWE-9/wikiverse-eholloway1",
+      img: null,
+      descr: "This is a SPA React Wikipedia clone, usefull for publishing articles. Users can add arrticles to a list including the articles title, author, content, tags, and a created at tag. " +
+        "Users can view individual articles, or view all articles added to the page so far, or deleted an unwanted article from the page."
     }
   ];
 
@@ -73,7 +87,7 @@ export function Portfolio() {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small" href={obj.url}>Project repo</Button>
+            <Button size="small" href={obj.url == null ? "" : obj.url} disabled={obj.url == null ? true : false}>{obj.url == null ? "Privated repo" : "Project Repo"}</Button>
           </CardActions>
         </Card>
         ))}
