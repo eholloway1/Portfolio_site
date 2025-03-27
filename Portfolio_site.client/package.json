@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@emotion/styled": "^11.14.0",
-    "@mui/icons-material": "^6.4.8",
+    "@mui/icons-material": "^7.0.0",
+    "@mui/material": "^7.0.0",
     "@mui/styled-engine-sc": "^6.4.6",
     "@react-router/node": "^7.3.0",
     "@react-router/serve": "^7.3.0",
